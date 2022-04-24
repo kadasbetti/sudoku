@@ -49,5 +49,13 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\konnyu.txt" />
+    <Content Include="Resources\kozepes.txt" />
+    <Content Include="Resources\nehez.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy $(ProjectDir)Resources $(TargetDir) /y</PostBuildEvent>
+  </PropertyGroup>
 </Project>
